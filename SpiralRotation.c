@@ -3,9 +3,12 @@
 #include <GL/glut.h>
 #include <GL/glu.h>
 #include <GL/gl.h>
+#include<math.h>
+#include <time.h>
 
 float posx = 0;
 float posy = 0;
+float var;
 #define PI 3.14159
 void drawLines(void)
 {
@@ -26,15 +29,16 @@ void drawLines(void)
     GLfloat radius = 6.0f;
     int gradation = 20;
     float d = 2.0f;
+    float H = 0.3f;
     glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
-    for (float alpha = 0.0; alpha < 20*PI; alpha += PI/gradation)
+    for (float alpha = -10*PI; alpha < 10*PI; alpha += PI/gradation)
     {
         glBegin(GL_TRIANGLE_STRIP);
-        for (beta = 0.0; beta < 20*2.01*PI; beta += PI/gradation)
+        for (beta = -10*PI; beta < 10*PI; beta += PI/gradation)
         {
-            x = radius*cos(beta) + d;
-            y = radius*sin(beta) + d;
-            z = beta;
+            x = radius*cos(beta) + d*var;
+            y = radius*sin(beta) + d*var;
+            z = H*beta + d*var;
             glVertex3f(x, y, z);
         }
         glEnd();
@@ -91,7 +95,8 @@ int main(int argc, const char * argv[])
 {
 
     // insert code here...
-
+    srand(time(NULL));
+    var = (float)rand()/(float)(RAND_MAX/1.0);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA | GLUT_SINGLE);
     glutInitWindowPosition(400, 200);
