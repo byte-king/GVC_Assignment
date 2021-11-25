@@ -1,3 +1,6 @@
+// Roll No - IIT2019179
+// Name - Sahil Sharma
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <GL/glut.h>
@@ -25,25 +28,25 @@ void drawLines(void)
     glBegin(GL_TRIANGLES);
 
     //front triangle
-    glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+    glColor4f(0.1f, 0.7f, 0.9f, 1.0f);
     glVertex3f(0.0f, 5.0f, 0.0f);
     glVertex3f( -5.0f, -5.0f, 0.0f);
     glVertex3f( 5.0f,  -5.0f, 0.0f);
 
     //right side triangle
-    glColor4f(0.0f, 0.0f, 1.0f, 1.0f);
+    glColor4f(0.9f, 0.7f,0.9f, 1.0f);
     glVertex3f( 5.0f,  -5.0f, 0.0f);
     glVertex3f(0.0f, 5.0f, 0.0f);
     glVertex3f( 0.0f,  -5.0f, -5.0f);
 
     //left side triangle
-    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+    glColor4f(0.1f, 0.7f, 0.9f, 1.0f);
     glVertex3f( -5.0f, -5.0f, 0.0f);
     glVertex3f(0.0f, 5.0f, 0.0f);
     glVertex3f( 0.0f,  -5.0f, -5.0f);
 
     //bottom triangle
-    glColor4f(0.0f, 1.0f, 0.0f, 1.0f);
+    glColor4f(0.1f, 0.7f, 0.9f, 1.0f);
     glVertex3f( -5.0f, -5.0f, 0.0f);
     glVertex3f( 5.0f,  -5.0f, 0.0f);
     glVertex3f( 0.0f,  -5.0f, -5.0f);
@@ -106,7 +109,7 @@ int main(int argc, const char * argv[])
     glutInitDisplayMode(GLUT_RGBA | GLUT_SINGLE);
     glutInitWindowPosition(400, 200);
     glutInitWindowSize(500, 500);
-    glutCreateWindow("OpenGLTest");
+    glutCreateWindow("Assignment-1");
 
     init();
 
