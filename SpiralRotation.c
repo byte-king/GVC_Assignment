@@ -1,3 +1,6 @@
+// RollNo - IIT2019179
+// Name - Sahil Sharma
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <GL/glut.h>
@@ -101,7 +104,7 @@ int main(int argc, const char * argv[])
     glutInitDisplayMode(GLUT_RGBA | GLUT_SINGLE);
     glutInitWindowPosition(400, 200);
     glutInitWindowSize(1000, 1000);
-    glutCreateWindow("OpenGLTest");
+    glutCreateWindow("Assignment-Q2");
 
     init();
 
