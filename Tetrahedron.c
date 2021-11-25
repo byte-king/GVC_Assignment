@@ -1,6 +1,8 @@
 // Roll No - IIT2019179
 // Name - Sahil Sharma
 
+// Link for reference : https://stackoverflow.com/questions/17585812/drawing-a-tetrahedron-with-4-triangles-with-opengl/17586084#17586084
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <GL/glut.h>
